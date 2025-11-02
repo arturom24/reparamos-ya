@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+
+* {
+    font-family:  "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-primary: #3473b2;
+    --green-color: #34b268;
+    --text-color: #1a2428;
+    --bg-color: #fff;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
+    padding: 20px 100px;
+}
+
+img {
+    width: 110px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 5px;
+}
+
+.navbar {
+    display: flex;
+    column-gap: .5rem;
+}
+
+.navbar a:hover{
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    color: var(--bg-color);
+    transition: background .5s;
+}
+
+.navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+}
+
+#menu-icon {
+    display: none;
+    cursor: pointer;
+    z-index: 10001;
+    font-size: 24px;
+}
+
+.hero {
+    background-color: var(--color-primary);
+    padding: 120px 20px 60px;
+    text-align: center;
+    color: var(--bg-color);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-weight: 300;
+}
+
+.hero .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    background-color: var(--green-color);
+    color: var(--bg-color);
+    transition: .2s ease;
+}
+
+.hero .btn-whatsapp:hover {
+    opacity: .85;
+}
+
+.hero .bx {
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    header {
+        padding: 12px 10px;
+    }
+    .navbar {
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+        transition: .2 all linear;
+        text-align: left;
+    }
+    .navbar a {
+        padding: 1rem;
+        margin: 1rem;
+        display: block;
+    }
+    .navbar.active {
+        top: 100%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero .btn-whatsapp {
+        font-size: 16px;
+        padding: 12px 22px;
+    }
+}
