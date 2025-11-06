@@ -16,6 +16,7 @@
     --green-color: #34b268;
     --text-color: #1a2428;
     --bg-color: #fff;
+    --orange-color: #d79942;
 }
 
 .site-header {
@@ -190,7 +191,7 @@ img {
     padding: 0.5rem 0 0;
     font-weight: 500;
     font-size: 13px;
-    color: #d79942;
+    color: var(--orange-color);
 }
 
 .card h3 {
