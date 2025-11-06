@@ -179,6 +179,7 @@ img {
     justify-content: center;
     gap: 8px;
     margin-top: auto;
+    font-size: 1rem;
 }
 
 .producto-button:hover {
@@ -261,6 +262,17 @@ img {
         font-size: 16px;
         padding: 12px 22px;
     }
+    .card {
+        padding: 1rem;
+    }
+    .producto-button {
+        font-size: 0.9rem;
+    }
+    .card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
     }
