@@ -153,6 +153,10 @@
     border-radius: 0.5rem;
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
 .card-img {
     width: 100%;
     aspect-ratio: 1 / 1; 
@@ -200,6 +204,94 @@
     padding-bottom: 0.5rem;
 }
 
+/* Servicios */
+.servicios .producto-button {
+    background-color: var(--orange-color);
+}
+
+.servicios {
+  background: linear-gradient(135deg, #f4f7fb, #dfe9f3);
+  padding: 60px 20px;
+}
+
+.servicios .section-title {
+  color: var(--orange-color);
+}
+
+.servicios .section-text {
+  color: #444;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.servicios .card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.servicios .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(52, 115, 178, 0.3);
+}
+
+/* Imagen con efecto zoom */
+.servicios .card-img img {
+  transition: transform 0.5s ease;
+}
+
+.servicios .card:hover .card-img img {
+  transform: scale(1.05);
+}
+
+/* Título y texto centrados */
+.servicios .card h3 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-top: 12px;
+}
+
+.servicios .card p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0 10px;
+  margin-bottom: 16px;
+}
+
+/* Estado inicial (oculto) */
+.servicios .card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Estado visible (se anima) */
+.servicios .card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.servicios .card:nth-child(1) { animation-delay: 0.1s; }
+.servicios .card:nth-child(2) { animation-delay: 0.2s; }
+.servicios .card:nth-child(3) { animation-delay: 0.3s; }
+.servicios .card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Footer */
 .footer-container {
@@ -218,11 +310,13 @@
 .footer-box h2 {
     color: #2b303b;
 }
-.footer-box .enlaces {
+
+.footer-box .enlaces{
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
 }
+
 .footer-box a {
     color: #2b303b;
     font-size: 14px;
@@ -254,7 +348,7 @@
     background-color: var(--bg-color);
     color: var(--color-primary);
     border-radius: 5rem;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .footer-box .contacto i {
@@ -269,7 +363,6 @@
     color: var(--bg-color);
     transition: 0.2s all linear;
 }
-
 
 /* Copyright */
 .copyright {
@@ -348,7 +441,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .footer-container {
-        grid-template-columns: repeat(1, 1fr);
+        /* grid-template-columns: repeat(1, 1fr); */
         gap: 2rem;
     }
     .footer-img {
